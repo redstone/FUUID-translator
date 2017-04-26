@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.massivecraft</groupId>
-    <artifactId>Factions</artifactId>
+    <artifactId>FUUID-translator</artifactId>
     <version>1.6.9.5-U0.1.20</version>
     <packaging>jar</packaging>
 
-    <name>Factions</name>
+    <name>FUUID-translator</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
