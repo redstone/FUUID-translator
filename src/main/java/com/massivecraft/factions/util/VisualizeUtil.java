@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import java.util.*;
 import java.util.Map.Entry;
 
+@Deprecated
 public class VisualizeUtil {
 
     protected static Map<UUID, Set<Location>> playerLocations = new HashMap<UUID, Set<Location>>();

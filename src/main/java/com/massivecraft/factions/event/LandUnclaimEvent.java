@@ -6,9 +6,7 @@ import com.massivecraft.factions.Faction;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 
-/**
- * Event called when an FPlayer unclaims land for a Faction.
- */
+@Deprecated
 public class LandUnclaimEvent extends FactionPlayerEvent implements Cancellable {
 
     private boolean cancelled;

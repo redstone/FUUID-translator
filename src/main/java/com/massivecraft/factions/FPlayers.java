@@ -1,27 +1,19 @@
 package com.massivecraft.factions;
 
-import com.massivecraft.factions.zcore.persist.json.JSONFPlayers;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
+import com.massivecraft.factions.fake.FakeFPlayers;
+
 import java.util.Collection;
 
+@Deprecated
 public abstract class FPlayers {
-    protected static FPlayers instance = getFPlayersImpl();
+
+	protected static FPlayers fakeFPlayers = new FakeFPlayers();
+    public static FPlayers getInstance() { return fakeFPlayers; }
 
     public abstract void clean();
-
-    public static FPlayers getInstance() {
-        return instance;
-    }
-
-    private static FPlayers getFPlayersImpl() {
-        switch (Conf.backEnd) {
-            case JSON:
-                return new JSONFPlayers();
-        }
-        return null;
-    }
 
     public abstract Collection<FPlayer> getOnlinePlayers();
 
@@ -38,4 +30,5 @@ public abstract class FPlayers {
     public abstract FPlayer getById(String string);
 
     public abstract void load();
+    
 }

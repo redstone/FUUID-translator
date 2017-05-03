@@ -22,6 +22,7 @@ import java.util.logging.Level;
  * [7][<][<][<][<][<][<][7]
  */
 
+@Deprecated
 public abstract class SpiralTask implements Runnable {
 
     // general task-related reference data

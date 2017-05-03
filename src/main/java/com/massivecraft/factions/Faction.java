@@ -12,7 +12,9 @@ import org.bukkit.entity.Player;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Deprecated
 public interface Faction extends EconomyParticipator {
+	
     public HashMap<String, List<String>> getAnnouncements();
 
     public ConcurrentHashMap<String, LazyLocation> getWarps();
@@ -250,4 +252,7 @@ public interface Faction extends EconomyParticipator {
     public Set<FLocation> getAllClaims();
 
     public void setId(String id);
+
+	public net.redstoneore.legacyfactions.entity.Faction toNewFaction();
+	
 }

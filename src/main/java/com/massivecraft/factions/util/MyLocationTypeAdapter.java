@@ -6,7 +6,7 @@ import com.massivecraft.factions.P;
 import java.lang.reflect.Type;
 import java.util.logging.Level;
 
-
+@Deprecated
 public class MyLocationTypeAdapter implements JsonDeserializer<LazyLocation>, JsonSerializer<LazyLocation> {
 
     private static final String WORLD = "world";

@@ -6,9 +6,7 @@ import com.massivecraft.factions.Factions;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 
-/**
- * Event called when a faction is disbanded.
- */
+@Deprecated
 public class FactionDisbandEvent extends FactionEvent implements Cancellable {
 
     private boolean cancelled = false;

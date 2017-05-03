@@ -4,9 +4,7 @@ import com.massivecraft.factions.Faction;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-/**
- * Represents an event involving a Faction.
- */
+@Deprecated
 public class FactionEvent extends Event {
 
     private static final HandlerList handlers = new HandlerList();

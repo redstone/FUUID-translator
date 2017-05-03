@@ -5,6 +5,8 @@ import com.massivecraft.factions.Faction;
 import com.massivecraft.factions.struct.Relation;
 import org.bukkit.event.Cancellable;
 
+
+@Deprecated
 public class FactionRelationWishEvent extends FactionPlayerEvent implements Cancellable {
     private final Faction targetFaction;
     private final Relation currentRelation;

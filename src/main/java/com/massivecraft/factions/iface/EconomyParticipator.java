@@ -2,6 +2,7 @@ package com.massivecraft.factions.iface;
 
 import com.massivecraft.factions.zcore.util.TL;
 
+@Deprecated
 public interface EconomyParticipator extends RelationParticipator {
 
     public String getAccountId();

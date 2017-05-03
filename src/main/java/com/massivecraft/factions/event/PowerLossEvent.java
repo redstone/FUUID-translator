@@ -5,9 +5,7 @@ import com.massivecraft.factions.Faction;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 
-/**
- * Event called when a player loses power.
- */
+@Deprecated
 public class PowerLossEvent extends FactionPlayerEvent implements Cancellable {
 
     private boolean cancelled = false;

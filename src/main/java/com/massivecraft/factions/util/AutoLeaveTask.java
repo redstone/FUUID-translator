@@ -3,6 +3,7 @@ package com.massivecraft.factions.util;
 import com.massivecraft.factions.Conf;
 import com.massivecraft.factions.P;
 
+@Deprecated
 public class AutoLeaveTask implements Runnable {
 
     private static AutoLeaveProcessTask task;

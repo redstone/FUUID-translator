@@ -4,9 +4,7 @@ import com.massivecraft.factions.FPlayer;
 import com.massivecraft.factions.Faction;
 import org.bukkit.event.Cancellable;
 
-/**
- * Event called when an FPlayer joins a Faction.
- */
+@Deprecated
 public class FPlayerJoinEvent extends FactionPlayerEvent implements Cancellable {
 
     PlayerJoinReason reason;

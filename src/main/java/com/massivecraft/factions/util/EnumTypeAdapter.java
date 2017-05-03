@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+@Deprecated
 public final class EnumTypeAdapter<T extends Enum<T>> extends TypeAdapter<T> {
 
     private final Map<String, T> nameToConstant = new HashMap<String, T>();

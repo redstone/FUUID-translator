@@ -1,16 +1,17 @@
 package com.massivecraft.factions;
 
-import com.google.common.collect.ImmutableMap;
-import com.massivecraft.factions.integration.dynmap.DynmapStyle;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 
+import com.google.common.collect.Lists;
+
 import java.util.*;
 
+@Deprecated
 public class Conf {
 
-    public static List<String> baseCommandAliases = new ArrayList<String>();
+    public static List<String> baseCommandAliases = Lists.newArrayList("f");
     public static boolean allowNoSlashCommand = true;
 
     // Colors
@@ -325,22 +326,6 @@ public class Conf {
     public static final transient String DYNMAP_STYLE_HOME_MARKER = "greenflag";
     public static final transient boolean DYNMAP_STYLE_BOOST = false;
 
-    public static DynmapStyle dynmapDefaultStyle = new DynmapStyle()
-            .setStrokeColor(DYNMAP_STYLE_LINE_COLOR)
-            .setLineOpacity(DYNMAP_STYLE_LINE_OPACITY)
-            .setLineWeight(DYNMAP_STYLE_LINE_WEIGHT)
-            .setFillColor(DYNMAP_STYLE_FILL_COLOR)
-            .setFillOpacity(DYNMAP_STYLE_FILL_OPACITY)
-            .setHomeMarker(DYNMAP_STYLE_HOME_MARKER)
-            .setBoost(DYNMAP_STYLE_BOOST);
-
-    // Optional per Faction style overrides. Any defined replace those in dynmapDefaultStyle.
-    // Specify Faction either by name or UUID.
-    public static Map<String, DynmapStyle> dynmapFactionStyles = ImmutableMap.of(
-            "SafeZone", new DynmapStyle().setStrokeColor("#FF00FF").setFillColor("#FF00FF").setBoost(false),
-            "WarZone", new DynmapStyle().setStrokeColor("#FF0000").setFillColor("#FF0000").setBoost(false)
-    );
-
 
     //Faction banks, to pay for land claiming and other costs instead of individuals paying for them
     public static boolean bankEnabled = true;
@@ -448,19 +433,19 @@ public class Conf {
     // -------------------------------------------- //
     // Persistance
     // -------------------------------------------- //
-    private static transient Conf i = new Conf();
+    @SuppressWarnings("unused")
+	private static transient Conf i = new Conf();
 
     public static void load() {
-        P.p.persist.loadOrSaveDefault(i, Conf.class, "conf");
+        
     }
 
     public static void save() {
-        P.p.persist.save(i);
+        
     }
 
     public enum Backend {
-        JSON,
-        //MYSQL,  TODO
+        JSON
         ;
     }
 }

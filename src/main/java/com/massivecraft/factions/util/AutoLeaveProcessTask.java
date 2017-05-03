@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.ListIterator;
 import java.util.logging.Level;
 
+@Deprecated
 public class AutoLeaveProcessTask extends BukkitRunnable {
 
     private transient boolean readyToGo = false;

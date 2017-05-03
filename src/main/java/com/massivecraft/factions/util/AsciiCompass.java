@@ -5,6 +5,7 @@ import org.bukkit.ChatColor;
 
 import java.util.ArrayList;
 
+@Deprecated
 public class AsciiCompass {
 
     public enum Point {

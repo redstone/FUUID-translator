@@ -8,6 +8,7 @@ import java.util.logging.Level;
 
 // TODO: Give better name and place to differentiate from the entity-orm-ish system in "com.massivecraft.core.persist".
 
+@Deprecated
 public class Persist {
 
     private MPlugin p;

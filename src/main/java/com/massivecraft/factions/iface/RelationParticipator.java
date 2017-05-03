@@ -3,6 +3,7 @@ package com.massivecraft.factions.iface;
 import com.massivecraft.factions.struct.Relation;
 import org.bukkit.ChatColor;
 
+@Deprecated
 public interface RelationParticipator {
 
     public String describeTo(RelationParticipator that);

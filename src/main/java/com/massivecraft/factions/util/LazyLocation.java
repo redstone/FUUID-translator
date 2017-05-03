@@ -98,4 +98,12 @@ public class LazyLocation implements Serializable {
     public final double getYaw() {
         return yaw;
     }
+    
+    public net.redstoneore.legacyfactions.util.LazyLocation toNewLazyLocation() {
+    	return new net.redstoneore.legacyfactions.util.LazyLocation(this.getLocation());
+    }
+    
+    public static LazyLocation valueOf(net.redstoneore.legacyfactions.util.LazyLocation ll) {
+    	return new LazyLocation(ll.getLocation());
+    }
 }

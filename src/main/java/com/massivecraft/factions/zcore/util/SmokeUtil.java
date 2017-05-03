@@ -22,6 +22,7 @@ import java.util.Random;
 //            8    North - West
 //-----------------------------
 
+@Deprecated
 public class SmokeUtil {
 
     public static Random random = new Random();

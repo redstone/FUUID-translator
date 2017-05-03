@@ -2,6 +2,7 @@ package com.massivecraft.factions.struct;
 
 import com.massivecraft.factions.zcore.util.TL;
 
+@Deprecated
 public enum ChatMode {
     FACTION(3, TL.CHAT_FACTION),
     ALLIANCE(2, TL.CHAT_ALLIANCE),

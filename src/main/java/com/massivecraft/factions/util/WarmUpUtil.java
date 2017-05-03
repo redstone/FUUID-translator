@@ -4,6 +4,7 @@ import com.massivecraft.factions.FPlayer;
 import com.massivecraft.factions.P;
 import com.massivecraft.factions.zcore.util.TL;
 
+@Deprecated
 public class WarmUpUtil {
 
     /**

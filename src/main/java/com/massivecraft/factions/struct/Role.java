@@ -3,6 +3,7 @@ package com.massivecraft.factions.struct;
 import com.massivecraft.factions.Conf;
 import com.massivecraft.factions.zcore.util.TL;
 
+@Deprecated
 public enum Role {
     ADMIN(2, TL.ROLE_ADMIN),
     MODERATOR(1, TL.ROLE_MODERATOR),
@@ -45,5 +46,18 @@ public enum Role {
         }
 
         return "";
+    }
+    
+    public static Role valueOf(net.redstoneore.legacyfactions.Role role) {
+    	if (role == net.redstoneore.legacyfactions.Role.ADMIN ){
+    		return Role.ADMIN;
+    	}
+    	if (role == net.redstoneore.legacyfactions.Role.MODERATOR ){
+    		return Role.MODERATOR;
+    	}
+    	if (role == net.redstoneore.legacyfactions.Role.NORMAL ){
+    		return Role.NORMAL;
+    	}
+    	return null;
     }
 }

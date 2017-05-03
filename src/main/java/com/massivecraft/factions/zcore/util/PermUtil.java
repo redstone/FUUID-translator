@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-
+@Deprecated
 public class PermUtil {
 
     public Map<String, String> permissionDescriptions = new HashMap<String, String>();

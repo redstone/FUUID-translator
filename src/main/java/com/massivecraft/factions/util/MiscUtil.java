@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+@Deprecated
 public class MiscUtil {
 
     public static EntityType creatureTypeFromEntity(Entity entity) {

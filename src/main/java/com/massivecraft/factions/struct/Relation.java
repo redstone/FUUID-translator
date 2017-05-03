@@ -4,7 +4,7 @@ import com.massivecraft.factions.Conf;
 import com.massivecraft.factions.zcore.util.TL;
 import org.bukkit.ChatColor;
 
-
+@Deprecated
 public enum Relation {
     MEMBER(4, "member"),
     ALLY(3, "ally"),

@@ -5,6 +5,7 @@ import com.massivecraft.factions.Faction;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 
+@Deprecated
 public class LandUnclaimAllEvent extends FactionPlayerEvent implements Cancellable {
     private boolean cancelled;
 

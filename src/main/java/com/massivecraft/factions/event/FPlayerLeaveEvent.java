@@ -4,6 +4,7 @@ import com.massivecraft.factions.FPlayer;
 import com.massivecraft.factions.Faction;
 import org.bukkit.event.Cancellable;
 
+@Deprecated
 public class FPlayerLeaveEvent extends FactionPlayerEvent implements Cancellable {
 
     private PlayerLeaveReason reason;

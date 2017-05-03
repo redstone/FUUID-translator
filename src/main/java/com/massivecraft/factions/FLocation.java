@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+@Deprecated
 public class FLocation implements Serializable {
     private static final long serialVersionUID = -8292915234027387983L;
     private static final boolean worldBorderSupport;
@@ -225,6 +226,10 @@ public class FLocation implements Serializable {
 
         return ret;
     }
+    
+    public net.redstoneore.legacyfactions.FLocation toNewFLocation() {
+    	return new net.redstoneore.legacyfactions.FLocation(this.worldName, this.x, this.z);
+    }
 
     //----------------------------------------------//
     // Comparison
@@ -247,5 +252,16 @@ public class FLocation implements Serializable {
 
         FLocation that = (FLocation) obj;
         return this.x == that.x && this.z == that.z && (this.worldName == null ? that.worldName == null : this.worldName.equals(that.worldName));
+    }
+    
+    public static Set<FLocation> toOldSetLocation(Set<net.redstoneore.legacyfactions.FLocation> oldlocations) {
+    	Set<FLocation> flocations = new HashSet<FLocation>();
+    	
+    	for (net.redstoneore.legacyfactions.FLocation location : oldlocations) {
+    		flocations.add(new FLocation(location.getWorldName(), (int) location.getX(), (int) location.getZ()));
+    	}
+    	
+    	
+    	return flocations;
     }
 }
